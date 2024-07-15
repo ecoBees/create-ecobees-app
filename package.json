@@ -1,0 +1,29 @@
+{
+  "name": "@ecobees/create-ecobees-app",
+  "version": "1.0.0",
+  "description": "Create various app types with Ecobees custom configurations",
+  "main": "src/index.js",
+  "bin": {
+    "create-ecobees-app": "./bin/create-ecobees-app.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "boilerplate",
+    "ecobees"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.6"
+  }
+}

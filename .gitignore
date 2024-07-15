@@ -1,0 +1,13 @@
+# .gitignore for create-ecobees-react
+node_modules/
+.DS_Store
+*.log
+
+# package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# build files
+dist/
+out/
