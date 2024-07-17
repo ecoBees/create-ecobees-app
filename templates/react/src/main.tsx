@@ -4,17 +4,29 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import "./index.css";
+import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import "./index.css";
 
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <RootLayout />,
     errorElement: <NotFound />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
   },
 ]);
 
