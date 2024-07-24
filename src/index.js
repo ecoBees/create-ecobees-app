@@ -26,7 +26,7 @@ async function init() {
       type: "list",
       name: "template",
       message: "Which template would you like to use?",
-      choices: ["react", "next"],
+      choices: ["react", "next", "express"],
     },
   ]);
 

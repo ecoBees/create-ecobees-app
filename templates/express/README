@@ -1,0 +1,16 @@
+# Quick Start Guide
+
+## Copy paste the followings on your terminal:
+
+cp .env.sample .env
+
+## Modify the .env file with your requirements
+
+## Database
+
+Change or add the DATABASE_URL in your .env file according to your database URL.
+
+## Prisma commands
+
+npx prisma generate && npx prisma migrate dev
+
