@@ -1,6 +1,6 @@
 {
   "name": "@ecobees/create-ecobees-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create various app types with Ecobees custom configurations",
   "main": "src/index.js",
   "bin": {
@@ -16,10 +16,12 @@
   },
   "keywords": [
     "react",
+    "express",
+    "next",
     "boilerplate",
     "ecobees"
   ],
-  "author": "Your Name",
+  "author": "ecobees",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",

@@ -1,0 +1,9 @@
+Our express app follow module based architecture. 
+
+Example: 
+
+user.route.ts // for all routes of user module
+user.controller.ts // for all controllers of user module
+user.service.ts // for all services of user module
+user.dto.ts // for all the types of user module
+user.middleware.ts // for all the middlewares of user module
