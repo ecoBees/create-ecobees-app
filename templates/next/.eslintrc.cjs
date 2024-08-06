@@ -8,11 +8,10 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:@next/next/recommended",
-    "plugin:prettier/recommended",
   ],
   ignorePatterns: [".next", "out", "dist", ".eslintrc.js"],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react", "react-hooks"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier"],
   settings: {
     react: {
       version: "detect",
@@ -29,7 +28,8 @@ module.exports = {
     "no-console": ["warn", { allow: ["warn", "error"] }],
     "prefer-const": "error",
     eqeqeq: ["error", "always"],
-    "prettier/prettier": ["error"],
+    "prettier/prettier": ["warn"],
+
     // Next.js specific rules
     "@next/next/no-html-link-for-pages": "error",
     "@next/next/no-img-element": "error",

@@ -1,12 +1,9 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
 echo '🏗️👷 Testing and building your project before committing..'
 
 # Check Prettier standards
 npm run check-format ||
 (
-    echo 'Prettier Check Failed. Run 'npm run format' to fix the issues. Then try to commit again.'
+    echo 'Prettier Check Failed. Run "npm run format" to fix the issues. Then try to commit again.' 
     false;
 )
 

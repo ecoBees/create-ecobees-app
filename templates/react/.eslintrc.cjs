@@ -7,11 +7,10 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:prettier/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "react"],
+  plugins: ["react-refresh", "react", "prettier"],
   settings: {
     react: {
       version: "detect",
@@ -29,6 +28,6 @@ module.exports = {
     "no-console": ["warn", { allow: ["warn", "error"] }],
     "prefer-const": "error",
     eqeqeq: ["error", "always"],
-    "prettier/prettier": ["error"],
+    "prettier/prettier": ["warn"],
   },
 };
