@@ -4,8 +4,16 @@ const inquirer = require("inquirer");
 const { createProject } = require("./utils/createProject");
 const { installDependencies } = require("./utils/installDependencies");
 const { initializeGit } = require("./utils/initializeGit");
+const {
+  checkCommandAvailability,
+} = require("./utils/checkCommandAvailability");
 
 async function init() {
+  // Check if git is available
+  if (!checkCommandAvailability("git")) {
+    process.exit(1);
+  }
+
   // Prompt for project name if not provided
   let projectName = process.argv[2];
   if (!projectName) {
@@ -40,6 +48,11 @@ async function init() {
     },
   ]);
 
+  // Check if the selected package manager is available
+  if (!checkCommandAvailability(packageManager)) {
+    process.exit(1);
+  }
+
   const targetDir = path.resolve(process.cwd(), projectName);
   const templateDir = path.resolve(__dirname, `../templates/${template}`);
 
@@ -51,8 +64,8 @@ async function init() {
       chalk.green(
         `✅ ${
           template.charAt(0).toUpperCase() + template.slice(1)
-        } project ${projectName} created successfully!`
-      )
+        } project ${projectName} created successfully!`,
+      ),
     );
   } catch (error) {
     console.error(chalk.red("Error:"), error);
