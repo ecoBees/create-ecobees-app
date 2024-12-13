@@ -10,7 +10,7 @@ async function requestAPI<ResponseType>(
   options: RequestOptions = {}
 ): Promise<{ data: ResponseType; response: Response }> {
   try {
-    const url = `${import.meta.env.VITE_SERVER_URL}${endpoint}`;
+    const url = `${process.env.NEXT_PUBLIC_API}${endpoint}`;
 
     // copy of options to avoid mutation
     const _options = { ...options };
