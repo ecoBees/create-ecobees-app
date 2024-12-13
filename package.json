@@ -1,6 +1,6 @@
 {
   "name": "@ecobees/create-ecobees-app",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Create various app types with Ecobees custom configurations",
   "main": "src/index.js",
   "bin": {
